@@ -16,6 +16,12 @@ function linebreak(tagname){
     var br=document.createElement(tagname);
     return br;
 }
+function buttons(tagname,attrname,attrvalue,content){
+    var ele2=document.createElement(tagname);
+    ele2.setAttribute(attrname,attrvalue);
+    ele2.innerHTML=content;
+    return ele2;
+}
 
 var firstname=labels("label","for","firstname","firstname");
 var br=linebreak("br");
@@ -36,4 +42,7 @@ var br7=linebreak("br");
 var password=labels("label","for","password","password");
 var br8=linebreak("br");
 var input4=inputs("input","type","password","name","password","id","password")
-document.body.append(firstname,br,input,br1,middlename,br2,input1,br3,lastname,br4,input2,br5,email,br6,input3,br7,password,br8,input4)
+var br9=linebreak("br");
+var button=buttons("button","type","button","submit");
+var br10=linebreak("br");
+document.body.append(firstname,br,input,br1,middlename,br2,input1,br3,lastname,br4,input2,br5,email,br6,input3,br7,password,br8,input4,br9,button,br10)
